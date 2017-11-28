@@ -3,3 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.ms_like_btn {
+  height:32px;
+  width:32px;
+  display:block;
+}
