@@ -23,10 +23,23 @@ class App extends Component {
             des="This is the desc."/>
         </p>
 
+        <div className="content">
 
-        <SortingButton />
+          <div className="ms-menu">
+            <SortingButton />
+            <SortingButton />
+            <SortingButton />
+          </div>
 
-        <Item />
+          <div className="ms-items-container flex-container space-between">
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </div>
+        </div>
 
       </div>
     );
