@@ -4,6 +4,7 @@ import MsParagraph from "./msp";
 import LikeButton from "./likebutton";
 
 class Item extends Component {
+    
     constructor(props) {
         super(props)
     }
@@ -30,7 +31,7 @@ class Item extends Component {
 
                     <div class="ms_item_price">
                         <MsParagraph
-                            text={price} />
+                            text={price + " per person"} />
                     </div>
 
                     <div className="ms-item-like-container">

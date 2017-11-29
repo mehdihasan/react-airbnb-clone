@@ -36,7 +36,8 @@ body {
   flex-direction:row;
 }
 
-.ms_menu_holder {
+.ms-menu-holder {
+  cursor: pointer;
   padding-left: 8px ;
   padding-right: 8px ;
   text-align: left ;
@@ -100,9 +101,9 @@ body {
 
 /* SECTION TITLE */
 
-.ms-section-title {
+/* .ms-section-title {
   margin-bottom: 16px;
-}
+} */
 
 .ms-section-title div h1 {
   font-weight: 700;
@@ -127,6 +128,7 @@ body {
 }
 
 .ms_item_holder {
+  padding-top: 20px;
   position: relative ;
   width: 25%;
 }
@@ -176,13 +178,17 @@ body {
   margin: 0px ;
   word-wrap: break-word ;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
-  font-size: 12px ;
-  line-height: 16px ;
+  
   letter-spacing: 0.4px ;
   padding-top: 0px ;
   padding-bottom: 0px ;
   color: #484848 ;
   display: inline ;
+
+
+  font-weight: 300;
+  font-size: 15px !important;
+  line-height: 18px !important;
 }
 
 .ms-item-like-container {

@@ -8,9 +8,39 @@ import { seedSections, filterTypes } from './data/seed'
 import './css/App.css';
 
 class App extends Component {
+
+  state = {
+    seeds: []
+  }
+
+  componentDidMount = () => {
+    this.setState({
+      seeds: seedSections
+    })
+  }
+
+  handleMenuClick = (sectionId) => {
+    var newSeeds = []
+    if (sectionId === 0) {
+      newSeeds = seedSections
+    } else {
+      {seedSections.map((section) => 
+        {
+          if (section.typeId === sectionId) {
+            newSeeds.push(section)
+          }
+        }
+      )}
+    }
+    
+    this.setState({
+      seeds: newSeeds
+    })
+  }
+  
   render() {
 
-    const seeds = seedSections
+    // const seeds = seedSections
     const filter = filterTypes
 
     return (
@@ -33,21 +63,21 @@ class App extends Component {
         </p> */}
 
         <div className="content">
-
           <div className="ms-menu ms-section-holder default-padding">
             {filter.map((filterData) => 
               <SortingButton
                 key={filterData.id}
-                data={filterData} />
+                data={filterData}
+                onMenuClick={this.handleMenuClick} />
             )}
           </div>
-
-          {seeds.map((sectionData) =>
-                    <Section
-                        key={sectionData.id}
-                        data={sectionData} />
-                )}
-          
+          <div className="ms-section-holder">
+            {this.state.seeds.map((sectionData) =>
+                <Section
+                    key={sectionData.id}
+                    data={sectionData} />
+            )}
+          </div>
         </div>
 
       </div>

@@ -3,7 +3,11 @@ import MsImage from "./msimage";
 import MsParagraph from "./msp";
 
 class SortingButton extends Component {
-    
+
+    handleClick = () => (
+        this.props.onMenuClick(this.props.data.id)
+    );
+
     constructor(props) {
         super(props)
     }
@@ -13,7 +17,7 @@ class SortingButton extends Component {
         const {title, imageUrl} = this.props.data
 
         return (
-            <div class="ms_menu_holder">
+            <div class="ms-menu-holder" onClick={this.handleClick}>
                 
                 <div class="ms_menu_img">
                     <MsImage
