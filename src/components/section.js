@@ -3,10 +3,6 @@ import Title from "./title";
 import Item from "./item";
 
 class Section extends Component {
-    
-    constructor(props) {
-        super(props)
-    }
 
     handleSecCategoryClick = (propertyType) => {
         this.props.onCatClick(propertyType)
@@ -17,7 +13,7 @@ class Section extends Component {
     }
 
     render() {
-        const {id, title, listings} = this.props.data
+        const {title, listings} = this.props.data
         if (listings.length > 0) {
             return (
                 <div className="ms-section-holder">
@@ -28,6 +24,7 @@ class Section extends Component {
                     <div className="ms-items-container flex-container space-between">
                         {listings.map((product) =>
                             <Item
+                                key={product.id}
                                 id={product.id}
                                 data={product}
                                 onSecCatClick={this.handleSecCategoryClick}

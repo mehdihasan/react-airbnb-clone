@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Greeter from "./components/greeter";
 import Title from "./components/title";
 import Section from "./components/section";
 import SortingButton from "./components/sortingbutton";
@@ -24,13 +23,13 @@ class App extends Component {
     if (sectionId === 0) {
       newSeeds = seedSections
     } else {
-      {seedSections.map((section) => 
+      seedSections.map((section) => 
         {
           if (section.typeId === sectionId) {
             newSeeds.push(section)
           }
         }
-      )}
+      )
     }
     
     this.setState({
@@ -42,15 +41,17 @@ class App extends Component {
     // alert(propertyType)
     var newItems = []
     var newSeeds = []
-    {seedSections.map((section) => 
-      {section.listings.map((item) => 
-        {
-          if (propertyType === item.property_type) {
-            newItems.push(item)
+    seedSections.map((section) => 
+      {if (section.id !== 0) {
+        section.listings.map((item) => 
+          {
+            if (propertyType === item.property_type) {
+              newItems.push(item)
+            }
           }
-        }
-      )}
-    )}
+        )
+      }}
+    )
     var newSection = {
       id: 0,
       typeId: 9,
@@ -87,7 +88,7 @@ class App extends Component {
       <div className="App">
 
         <div className="App-header">
-          <div className="content">
+          <div className="content ms-logo flex-container">
 
             <img src={logo} className="App-logo" alt="logo" />
 

@@ -8,25 +8,21 @@ class SortingButton extends Component {
         this.props.onMenuClick(this.props.data.id)
     );
 
-    constructor(props) {
-        super(props)
-    }
-
     render() {
 
         const {title, imageUrl} = this.props.data
 
         return (
-            <div class="ms-menu-holder" onClick={this.handleClick}>
+            <div className="ms-menu-holder" onClick={this.handleClick}>
                 
-                <div class="ms_menu_img">
+                <div className="ms_menu_img">
                     <MsImage
                         url={imageUrl}
                         height="72"
                         width="96" />
                 </div>
 
-                <div class="ms_menu_text">
+                <div className="ms_menu_text">
                     <MsParagraph
                         text={title} />
                 </div>

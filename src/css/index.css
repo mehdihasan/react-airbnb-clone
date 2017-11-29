@@ -17,6 +17,10 @@ body {
   align-content: space-between;
 }
 
+/* .ms-logo div {
+  align
+} */
+
 /* .space-between {
   justify-content: space-between;
 } */
@@ -127,17 +131,17 @@ body {
   padding-bottom: 12px ;
 }
 
-.ms_item_holder {
+.ms-item-holder {
   padding-top: 20px;
   position: relative ;
   width: 25%;
 }
 
-.ms_item_holder div {
+.ms-item-holder div {
   text-align: left;
 }
 
-.ms_item_holder div img {
+.ms-item-holder div img {
   border-radius: 3px ;
 }
 
@@ -158,7 +162,11 @@ body {
   margin-bottom: 4px; 
 }
 
-.ms_item_title div p {
+.ms-item-title {
+  cursor: pointer;
+}
+
+.ms-item-title div p {
   font-weight: 700 ;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
   font-size: 19px ;
@@ -177,7 +185,7 @@ body {
   margin-bottom: 4px; 
 }
 
-.ms_item_price div p {
+.ms-item-price div p {
   font-weight: normal ;
   margin: 0px ;
   word-wrap: break-word ;
