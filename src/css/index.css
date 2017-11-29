@@ -24,7 +24,7 @@ body {
 /* MENU */
 
 .content {
-  min-width: 1128px;
+  /* min-width: 1128px; */
   margin: 0 auto;
   position: relative;
   padding-left: 80px;
@@ -37,18 +37,18 @@ body {
 }
 
 .ms_menu_holder {
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  text-align: left !important;
-  background-color: transparent !important;
-  border: 1px solid rgba(0,0,0,0.1) !important;
-  border-radius: 3px !important;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06) !important;
-  margin-bottom: 4px !important;
+  padding-left: 8px ;
+  padding-right: 8px ;
+  text-align: left ;
+  background-color: transparent ;
+  border: 1px solid rgba(0,0,0,0.1) ;
+  border-radius: 3px ;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06) ;
+  margin-bottom: 4px ;
   margin-right: 20px;
-  padding: 0px !important;
-  overflow: hidden !important;
-  width: 25% !important;
+  padding: 0px ;
+  overflow: hidden ;
+  width: 25% ;
   box-sizing: border-box;
   display:flex;
   flex-direction:row;
@@ -57,10 +57,10 @@ body {
 .ms_menu_text {
   display:flex;
   flex-direction:column;
-  text-align: left !important;
-  padding-top: 14px !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  text-align: left ;
+  padding-top: 14px ;
+  padding-left: 20px ;
+  padding-right: 20px ;
 }
 
 .ms_menu_img {
@@ -79,28 +79,55 @@ body {
 }
 
 .ms_menu_text div {
-  margin: 0px !important;
-  word-wrap: break-word !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  font-size: 15px !important;
-  line-height: 18px !important;
-  letter-spacing: 0.2px !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  color: #484848 !important;
-  font-weight: 700 !important;
+  margin: 0px ;
+  word-wrap: break-word ;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-size: 15px ;
+  line-height: 18px ;
+  letter-spacing: 0.2px ;
+  padding-top: 0px ;
+  padding-bottom: 0px ;
+  color: #484848 ;
+  font-weight: 700 ;
 }
+
+/* SECTION */
+
+.ms-section-holder {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* SECTION TITLE */
+
+.ms-section-title {
+  margin-bottom: 16px;
+}
+
+.ms-section-title div h1 {
+  font-weight: 700;
+  margin-bottom: 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 28px;
+  line-height: 32px ;
+  letter-spacing: -0.6px ;
+  padding-top: 2px ;
+  padding-bottom: 2px ;
+  color: #484848 ;
+}
+
+
 
 /* SINGLE ITEM */
 
 .default-padding {
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  padding-bottom: 12px !important;
+  padding-left: 8px ;
+  padding-right: 8px ;
+  padding-bottom: 12px ;
 }
 
 .ms_item_holder {
-  position: relative !important;
+  position: relative ;
   width: 25%;
 }
 
@@ -109,53 +136,53 @@ body {
 }
 
 .ms_item_holder div img {
-  border-radius: 3px !important;
+  border-radius: 3px ;
 }
 
 .ms_item_cat div p {
   color: #787878;
-  font-weight: 700 !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
-  letter-spacing: 0.4px !important;
-  text-transform: uppercase !important;
-  white-space: nowrap !important;
+  font-weight: 700 ;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-size: 12px ;
+  line-height: 16px ;
+  letter-spacing: 0.4px ;
+  text-transform: uppercase ;
+  white-space: nowrap ;
   margin-top: 4px;
   margin-bottom: 4px; 
 }
 
 .ms_item_title div p {
-  font-weight: 700 !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  font-size: 19px !important;
-  line-height: 22px !important;
-  letter-spacing: undefined !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  color: #484848 !important;
-  max-height: 44px !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 2 !important;
-  -webkit-box-orient: vertical !important;
+  font-weight: 700 ;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-size: 19px ;
+  line-height: 22px ;
+  letter-spacing: undefined ;
+  padding-top: 0px ;
+  padding-bottom: 0px ;
+  color: #484848 ;
+  max-height: 44px ;
+  overflow: hidden ;
+  text-overflow: ellipsis ;
+  display: -webkit-box ;
+  -webkit-line-clamp: 2 ;
+  -webkit-box-orient: vertical ;
   margin-top: 4px;
   margin-bottom: 4px; 
 }
 
 .ms_item_price div p {
-  font-weight: normal !important;
-  margin: 0px !important;
-  word-wrap: break-word !important;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
-  font-size: 12px !important;
-  line-height: 16px !important;
-  letter-spacing: 0.4px !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  color: #484848 !important;
-  display: inline !important;
+  font-weight: normal ;
+  margin: 0px ;
+  word-wrap: break-word ;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
+  font-size: 12px ;
+  line-height: 16px ;
+  letter-spacing: 0.4px ;
+  padding-top: 0px ;
+  padding-bottom: 0px ;
+  color: #484848 ;
+  display: inline ;
 }
 
 .ms-item-like-container {
@@ -166,12 +193,12 @@ body {
 
 .ms-item-like-container div {
   position: relative;
-  background: transparent !important;
-  border: 0px !important;
-  cursor: pointer !important;
-  padding: 0px !important;
-  display: inline-block !important;
-  white-space: nowrap !important;
+  background: transparent ;
+  border: 0px ;
+  cursor: pointer ;
+  padding: 0px ;
+  display: inline-block ;
+  white-space: nowrap ;
 }
 
 .ms-like-btn {
@@ -179,6 +206,6 @@ body {
   width:32px;
   display:block;
 
-  position: absolute !important;
-  display: block !important;
+  position: absolute ;
+  display: block ;
 }
