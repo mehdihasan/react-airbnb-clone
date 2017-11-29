@@ -52,7 +52,7 @@ class App extends Component {
       )}
     )}
     var newSection = {
-      id: 1,
+      id: 0,
       typeId: 9,
       title: propertyType,  
       listings: newItems
@@ -60,6 +60,21 @@ class App extends Component {
     newSeeds.push(newSection)
     this.setState({
       seeds: newSeeds
+    })
+  }
+
+  handleFavClick = (itemId, item, section) => {
+    // remove item
+    if (this.state.seeds[0].listings.includes(item)) {
+      var index = this.state.seeds[0].listings.indexOf(item);
+      this.state.seeds[0].listings.splice(index, 1);
+    } 
+    // add item
+    else {
+      this.state.seeds[0].listings.push(item)
+    }
+    this.setState({
+      seeds: this.state.seeds
     })
   }
   
@@ -94,7 +109,8 @@ class App extends Component {
                 <Section
                     key={sectionData.id}
                     data={sectionData}
-                    onCatClick={this.handleCategoryClick} />
+                    onCatClick={this.handleCategoryClick}
+                    onFavClick={this.handleFavClick} />
             )}
           </div>
         </div>

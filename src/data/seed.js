@@ -28,6 +28,12 @@ let filterTypes = [
 
 const seedSections = [
     {
+      id: 0,
+      typeId: 1,
+      title: "My Favorites",  
+      listings: []
+    },
+    {
         id: 1,
         typeId: 1,
         title: "Where to stay",  
@@ -35,7 +41,7 @@ const seedSections = [
             {
                 "id": 10182231,
                 "listing_url": "https://www.airbnb.com/rooms/10182231",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Family friedly apartment",
                 "summary": "Walking distance to city center and Acropolis in a quite neibourhood  in a convinience location, restaurant, caffes very close",
@@ -132,7 +138,7 @@ const seedSections = [
               {
                 "id": 17802640,
                 "listing_url": "https://www.airbnb.com/rooms/17802640",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "New 3Bdrm Apartment with Acropolis View in Athens",
                 "summary": "Ideally located, a fully renovated 3 bedroom apartment with 2 full bathrooms in a very peaceful neighborhood, with an amazing Acropolis View.",
@@ -229,7 +235,7 @@ const seedSections = [
               {
                 "id": 222637,
                 "listing_url": "https://www.airbnb.com/rooms/222637",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Luxury 3-Bdrm Apartment with Acropolis view",
                 "summary": "",
@@ -326,7 +332,7 @@ const seedSections = [
               {
                 "id": 1272844,
                 "listing_url": "https://www.airbnb.com/rooms/1272844",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Small hostel with garden in Mets",
                 "summary": "",
@@ -423,7 +429,7 @@ const seedSections = [
               {
                 "id": 7326724,
                 "listing_url": "https://www.airbnb.com/rooms/7326724",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Cozy retro flat in Athens' heart!",
                 "summary": "Sunny house with a great view in the artistic and centrally located area of Mets, close the Parliament, the Acropolis, Zappeion and (URL HIDDEN) is decorated with love to the detail and provides everything to make your stay easy and comfy.",
@@ -520,7 +526,7 @@ const seedSections = [
               {
                 "id": 9834032,
                 "listing_url": "https://www.airbnb.com/rooms/9834032",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "",
                 "summary": "a very nice,well decorated and spacious flat,located in a quiet neghborhood (Mets area).with 2 bedrooms,one double bed and a sofa-bed.only 10-15 min.walk from the national garden,syntagma square and kallimarmaro stadium.",
@@ -617,7 +623,7 @@ const seedSections = [
               {
                 "id": 5246919,
                 "listing_url": "https://www.airbnb.com/rooms/5246919",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Acropolis - Athens - Panoramic view",
                 "summary": "Studio situated on a large terrasse,  on top of the hill of the Ancient marble Stadium used by the first Modern JO, next to center, 15' walk from Acropolis. 5' from 1st Cimetery.  About 25 m2, with kitchen and wc-shower, double roof garden, 30m2 x2.",
@@ -714,7 +720,7 @@ const seedSections = [
               {
                 "id": 13554349,
                 "listing_url": "https://www.airbnb.com/rooms/13554349",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "A Room of One's Own (Mets, Athens)",
                 "summary": "Very sunny and quite bedroom in the heart of Athens, in one of the most beautiful districts, Mets. Ideal for solo adventurers. The apartment is just behind Ardittos Hill and 3 min walk from Panathenaic Stadium. In walking distance from Acropolis, Syntagma Square, Temple of Zeus and the National Garden. If you feel like heading to the beach, the tram stop is 7 min away :)",
@@ -811,7 +817,7 @@ const seedSections = [
               {
                 "id": 13308906,
                 "listing_url": "https://www.airbnb.com/rooms/13308906",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Apartment with a gorgeous view",
                 "summary": "A unique apartment  in Mets, one of the oldest districts of Athens. A quite neighborhood a few steps away from the city centre and just behind the Panathenaic Stadium where the Olympic Games begin. Anything in need is within walking distance: archaeological sites, shopping center, supermarkets, cinemas, bars and restaurants!",
@@ -908,7 +914,7 @@ const seedSections = [
               {
                 "id": 16028956,
                 "listing_url": "https://www.airbnb.com/rooms/16028956",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Marvelous central & safe sleep 6 Sea View Parking",
                 "summary": "This is a homely apartment in Mets. Walking it is only 5 minutes from the Marble Stadium, 15 minutes from the Parthenon and the historical center of Athens. It is central in a safe and quite neighbourhood and also has great sea view from all the rooms and 2 secured parking spaces. There are nice pastry shops and taverns near the house. It is 45 minutes from the airport and is accessible by taxi, tram and metro. From the appartment you can have unforgettable walks to the historical center.",
@@ -1005,7 +1011,7 @@ const seedSections = [
               {
                 "id": 4022613,
                 "listing_url": "https://www.airbnb.com/rooms/4022613",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Charming apt in Mets, near Acropolis",
                 "summary": "This urban and comfortable apartment is located at one of the most scenic streets of Mets area and is guaranteed to make you feel like home. Close to the city center yet quiet, it's like a downtown suburb. Enjoy your stay!",
@@ -1102,7 +1108,7 @@ const seedSections = [
               {
                 "id": 17163570,
                 "listing_url": "https://www.airbnb.com/rooms/17163570",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Amazing studio with Acropolis view!",
                 "summary": "This is a studio in the most hip - intellectual area of Mets (pagkrati), one of the most beautiful central districts of Athens. With walking distance to centre and really stunning views of the whole city of athens from the top (acropolis, sea view) ,this is a great choice for a couple visiting Athens.",
@@ -1199,7 +1205,7 @@ const seedSections = [
               {
                 "id": 7235601,
                 "listing_url": "https://www.airbnb.com/rooms/7235601",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Cozy flat,Great view, 2floor-3rooms",
                 "summary": "It's a cozy two-storey apartment located in the 3rd and 4rd floor of an apartment building. We have 3 bedrooms, with a semi-double bed in each one of them. There are also 2 big balconies with a great view of the whole city, the sea, Acropolis and the Parthenon.",
@@ -1296,7 +1302,7 @@ const seedSections = [
               {
                 "id": 8662275,
                 "listing_url": "https://www.airbnb.com/rooms/8662275",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Spacious room in lovely location",
                 "summary": "Only a 20 min walk from the Acropolis museum and center of the city, a spacious room in a bright and airy apartment! Located in Mets, one of the nicest neighbourhoods of Athens.",
@@ -1393,7 +1399,7 @@ const seedSections = [
               {
                 "id": 14331261,
                 "listing_url": "https://www.airbnb.com/rooms/14331261",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "feels like a local",
                 "summary": "Quiet appartment downtown witch can accomondate 2 people (couple) in a double spacious and confrortable bed and one more person on a couch.  500m from the metro station, two stops from the acropolis museum and easy access to syntagma square by feet or by bus.",
@@ -1490,7 +1496,7 @@ const seedSections = [
               {
                 "id": 12627997,
                 "listing_url": "https://www.airbnb.com/rooms/12627997",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Acropolis majestic view cozy studio",
                 "summary": "A lovely nest on the top floor of a 5 storey building offering unbeatable views over Athens & the Acropolis! Situated in the classy neighborhood 'Mets', it comfortably fits two and is ideal to explore Athens on foot. The Acropolis museum & Plaka are only 800m walking distance far.  Our studio apartment is very popular. Guests usually book their stay much earlier in advance. If our nest is not available during the dates of your journey,  please check also our other listing under our profile ;)",
@@ -1594,7 +1600,7 @@ const seedSections = [
             {
                 "id": 17540557,
                 "listing_url": "https://www.airbnb.com/rooms/17540557",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Newly refurbished 1BR in the center of Athens",
                 "summary": "This spacious one-bedroom apartment in central Athens is at the heart of Metaxourgeio, one of the most intriguing neighborhoods in the city.  Amenities include washer-dryer, fully equipped kitchen and WiFi connected to a flat-screen TV.",
@@ -1691,7 +1697,7 @@ const seedSections = [
               {
                 "id": 6680835,
                 "listing_url": "https://www.airbnb.com/rooms/6680835",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Cozy two-roomed flat",
                 "summary": "This bright apartment has 45 square metres and is centrally located. It has one bedroom furnished with a double bed and one spacious living room that accommodates two people as well, so there is enough space for four guests.Both the kitchen and the bathroom are freshly renovated and equipped.",
@@ -1788,7 +1794,7 @@ const seedSections = [
               {
                 "id": 3335841,
                 "listing_url": "https://www.airbnb.com/rooms/3335841",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Victoria House",
                 "summary": "Fully furnished,spacious 4 bedroom flat in Central Athens. Can sleep 8. Large Hall with extra sofabed, Livingroom, bathroom,WC,kitchen,all appliances, fresh bedsheets and towels. 2 Metro stations and National Rail,5min walk. Easy Access to the airport,Pireus harbour and sightseeings.Acropolis 8min train, National Museum and Universities 4min walk. Safe neighbourhood.Secure Private Parking.",
@@ -1885,7 +1891,7 @@ const seedSections = [
               {
                 "id": 17148018,
                 "listing_url": "https://www.airbnb.com/rooms/17148018",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Single Bed in a Shared Room - Athens City Centre",
                 "summary": "A Single Bed in Shared 4-beds Room is part of comfortable and recently (November 2016) refurnished and redecorated 3-bedrooms apartment boasts an excellent location in a quiet residential area in the city center of Athens. It is within walking distance of the center and many tourist attractions. Apartment is equipped and suitable for young travelers, couples, backpackers, group of friends, single travelers.",
@@ -1982,7 +1988,7 @@ const seedSections = [
               {
                 "id": 6826083,
                 "listing_url": "https://www.airbnb.com/rooms/6826083",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Appartment to rent in Athens.",
                 "summary": "A very beautiful appartment in Athens, for people that want to live and get to know well the capital city of Greece. We have designed it in a way, that will make you feel like home. WLAN, kitchen and a lot of extras included. 4-6 people.",
@@ -2079,7 +2085,7 @@ const seedSections = [
               {
                 "id": 15444374,
                 "listing_url": "https://www.airbnb.com/rooms/15444374",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "small & cozy room for one in the historic center",
                 "summary": "Located in the heart of the city’s historic center, the apartment offers a unique view to the largest green square of Athens, an unbeatable proximity to the archaeological marvels, and walking access to the most desirable neighborhoods including Plaka, Monastiraki, Gazi, Thisio, Kerameikos, many hip restaurants, intimate bars and coffee shops.  This small and cozy room, comfortably sleeps one guest. The apartment has central heating in all rooms and an air conditioning unit in the living area.",
@@ -2176,7 +2182,7 @@ const seedSections = [
               {
                 "id": 6302201,
                 "listing_url": "https://www.airbnb.com/rooms/6302201",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Athena House",
                 "summary": "Spacious,new furnished flat in Central Athens 3' from Victoria Metro Station. National Museum 5' on foot  The Acropolis 8' by train/30' on foot. Peraeus 20'.Airport 40'.Sleeps 7. Single or double beds on demand. Private parking area next to the house",
@@ -2273,7 +2279,7 @@ const seedSections = [
               {
                 "id": 12999859,
                 "listing_url": "https://www.airbnb.com/rooms/12999859",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Big Balcony, 2 Bedrooms, 2-min Walk from Metro",
                 "summary": "Sunny and spacious (70 sqm) two-bedroom apartment, featuring a 20 sqm balcony on the front side, painted in mediterranean colors and decorated with care. It's located trully in the heart of Athens, distanced less than a 100 meters from the Metro st.",
@@ -2377,7 +2383,7 @@ const seedSections = [
             {
                 "id": 16263103,
                 "listing_url": "https://www.airbnb.com/rooms/16263103",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Stunning  view of Acropolis and Athens",
                 "summary": "Studio on the 7th floor with panoramic and spectacular view of the Acropolis, Lycabettus and Piraeus. Fully equipped. 10 minutes from the Acropolis, 5-7 minutes from the metro, Omonia, Monastiraki and Thissio. Situated next to Abdi square which are traditional and modern cafés and restaurants. The space is suitable for 2 people and we offer everything necessary to feel like your house. We also have a TV 32\" with satellite. For your safety provide and alarm.",
@@ -2474,7 +2480,7 @@ const seedSections = [
               {
                 "id": 12752770,
                 "listing_url": "https://www.airbnb.com/rooms/12752770",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Lovely Apartment With A Back Yard Garden",
                 "summary": "Lovely apartment with a back yard in Mets near Panathenaic Stadium, lovely walks in nature and lovely bars and restaurants 5-7 minutes walk from the house .The mascot of the house is our lovely and kind cat that lives inside the house and in the back yard, just some water and food will be all the care he needs",
@@ -2571,7 +2577,7 @@ const seedSections = [
               {
                 "id": 16902625,
                 "listing_url": "https://www.airbnb.com/rooms/16902625",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Elia\" Athens Central Apartment in Metaxourgeio",
                 "summary": "Elia\" is a completely renovated and cozy apartment. It is 50 square meter,  on the second floor, fully equipped and can host up to 4 guests.     It is located in the center of Athens , 3 minutes away from the metro  station \"Metaxourgeio\". The visitor can be in any of Athens main venues and attractions within 15-20 minutes on foot or within 10 minutes by train.",
@@ -2668,7 +2674,7 @@ const seedSections = [
               {
                 "id": 16574912,
                 "listing_url": "https://www.airbnb.com/rooms/16574912",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "100sq.Dream apart.Acropolis View",
                 "summary": "My apartment is close to everywhere. In a walking distance is Acropolis and Museum , the Historical center(Plaka-Monastiraki-Thissio), Metro station...etc.). You’ll love my place because of The view to the Acropolis The 100sq.  For the contemporary decoration but also with aesthetics of Athens. And certainly for the very interesting and alternative-artistic neighbourhood,which has very good and award-winning restaurants and taverns, and some of the best cafe-bars of the city!.",
@@ -2765,7 +2771,7 @@ const seedSections = [
               {
                 "id": 14018962,
                 "listing_url": "https://www.airbnb.com/rooms/14018962",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "50m2 apartment located in the center of the town",
                 "summary": "Ο χώρος μου είναι κοντά στο κέντρο της πόλης κοντά σε χώρους  τέχνης και πολιτισμού, σε εστιατόρια και καφετέριες. Κοντά σε μετρό λεωφορεία τρόλλευ .  Λόγοι που θα σας αρέσει ο χώρος μου: η τοποθεσία και η λειτουργικότητά του.  Είναι κατάλληλος για ζευγάρια, δραστηριότητες για ένα άτομο και επαγγελματίες ταξιδιώτες. Διαθέτει ένα υπνοδωμάτιο με διπλό κρεβάτι και δυνατότητα ύπνου έως και 3 άτομα στο σαλόνι. (καναπέδες που γίνονται μόνο και διπλό κρεβάτι αντίστοιχα)",
@@ -2862,7 +2868,7 @@ const seedSections = [
               {
                 "id": 16081326,
                 "listing_url": "https://www.airbnb.com/rooms/16081326",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Stylish and cozy studio near Acropolis",
                 "summary": "Ο χώρος μου είναι κοντά σε εστιατόρια και χώροι εστίασης, δραστηριότητες για οικογένειες, νυκτερινή ζωή και δημόσια συγκοινωνία. Λόγοι που θα σας αρέσει ο χώρος μου: άνετο κρεβάτι, κουζίνα και άνετο περιβάλλον. Ο χώρος μου είναι κατάλληλος για ζευγάρια, δραστηριότητες για ένα άτομο, επαγγελματίες ταξιδιώτες και κατοικίδια.",
@@ -2959,7 +2965,7 @@ const seedSections = [
               {
                 "id": 12019922,
                 "listing_url": "https://www.airbnb.com/rooms/12019922",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "room at historical city ^center 1",
                 "summary": "In 130sq.m. apartment at 7th floor cozy room with  shared bathroom / shower,  the center of Athens 10-20 minutes from Acropolis Plaka Monastiraki National Archaeological Museum. Total roorms 4.",
@@ -3056,7 +3062,7 @@ const seedSections = [
               {
                 "id": 13570287,
                 "listing_url": "https://www.airbnb.com/rooms/13570287",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Apartment in Historical Center 2",
                 "summary": "Antonia’s House is located in keramikos, the very heart of Athens, that allows you to quickly get anywhere in the city; easily accessible from the Airport and Port. It can accommodate up to 2 people in comfort, providing everything required .",
@@ -3160,7 +3166,7 @@ const seedSections = [
             {
                 "id": 14109263,
                 "listing_url": "https://www.airbnb.com/rooms/14109263",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Large New Double Room, Private Bathroom, Central!",
                 "summary": "I purchased & remodelled my home in late 2015, a space that will help you relax & able to let your mind be free. An oasis not far from the centre of town, metro station is 8 mins or 15-20 min walk to Monastiraki & other central attractions of Athens. Your own private room and bathroom, plus a peaceful garden awaits your next visit to this beautiful city.",
@@ -3257,7 +3263,7 @@ const seedSections = [
               {
                 "id": 80598,
                 "listing_url": "https://www.airbnb.com/rooms/80598",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Athens in old historic neighborhood",
                 "summary": "This beautiful apartment, is located in the suburb of Kolonos, a  historical neighbourhood near the Archaeological park of Akadimia Platonos where the ancient philosopher used to teach.  The apartment is on the 2nd floor of a family building",
@@ -3354,7 +3360,7 @@ const seedSections = [
               {
                 "id": 16398891,
                 "listing_url": "https://www.airbnb.com/rooms/16398891",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Central artistic room",
                 "summary": "A room in a central artistic house, 5 minutes (500 meters) from the nearest metro (Metaxourgio). Two steps away from the local market, and walking distance to many central places. You will share the apartment (kitchen, bathroom, living-room) with my lovely flat mate, Naga, a post-doc student (male). Being in the center, you can enjoy Athens to the fullest!",
@@ -3451,7 +3457,7 @@ const seedSections = [
               {
                 "id": 14088200,
                 "listing_url": "https://www.airbnb.com/rooms/14088200",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Athens cozy apt. in a historic area",
                 "summary": "Convenient, sunlit and cozy department 52m2 in the centre of Athens, two minutes from historical area of Archaeological park of Academia Platonos. Easily access to bus stop, metro, train station and plenty of shops to eat, drink and buy. My space is suitable for couples, activities for an individual, business travelers, families (with children) and pets.",
@@ -3548,7 +3554,7 @@ const seedSections = [
               {
                 "id": 9665205,
                 "listing_url": "https://www.airbnb.com/rooms/9665205",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Renovated apartment Kolonos area",
                 "summary": "Easily accessible from the Thessaloniki - Athens national road, our fully renovated apartment will be your starting point for visiting Athens either you are here for business or pleasure. Within walking distance from Sepolia and Larissa station Metro stations as well as central bus lines.",
@@ -3645,7 +3651,7 @@ const seedSections = [
               {
                 "id": 13121000,
                 "listing_url": "https://www.airbnb.com/rooms/13121000",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Central bright penthouse, Acropolis vιew",
                 "summary": "My place is a two-minute walk from Plato's Academy archaeological site.It is convenient, quiet, and cozy. It is near the city center, in a region full of artists and nightlife. Parks and all means of transport are really near. It's on the fifth floor with elevator and a balcony with a view to the Acropolis and a hammock is there for you to enjoy relaxing moments.  The house is appropriate for all kinds of people, couples,a single  person, professional travellers and families. Pets are welcome.",
@@ -3742,7 +3748,7 @@ const seedSections = [
               {
                 "id": 10121919,
                 "listing_url": "https://www.airbnb.com/rooms/10121919",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Peaceful apartment, relaxing garden",
                 "summary": "Discover my secret basement apartment in a quiet area of Central Athens: 2 bedrooms with open lounge/kitchen, accommodating up to 6 people with the sofa bed in the lounge. Not too far from anywhere; cook up a storm in the kitchen or chill in the garden or roof terrace.",
@@ -3839,7 +3845,7 @@ const seedSections = [
               {
                 "id": 10088481,
                 "listing_url": "https://www.airbnb.com/rooms/10088481",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Big, relaxing luxury home + garden",
                 "summary": "I purchased & remodelled my home in late 2015, a space that will help you relax & able to let your mind be free. An oasis not far from the centre of town, metro station is 8 mins or 15-20 min walk to Monastiraki & other central attractions of Athens.",
@@ -3936,7 +3942,7 @@ const seedSections = [
               {
                 "id": 3619975,
                 "listing_url": "https://www.airbnb.com/rooms/3619975",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Beautiful Room @ Center of Athens",
                 "summary": "5' from Metro. Beautifully decorated room with a double bunk bed, located in the ancient urban-historical center of Athens.  Walking distance to most interesting central places: Gazi and the bars around the Keramikos area: very close. Omonoia/Exarcheia and Thiseio/Monastiraki/Plaka easily walkable too. Classical ‘60s architecture, renovated and equipped with good looking IKEA furniture",
@@ -4033,7 +4039,7 @@ const seedSections = [
               {
                 "id": 16427171,
                 "listing_url": "https://www.airbnb.com/rooms/16427171",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "The Secret nest and the swimming pool!",
                 "summary": "If you want to experience Athens at it's best then come to Academia of Plato. This area of Athens is central, safe, and near Gazi full of cafes, bars, nightclubs, theatres and the world famous Plaka!",
@@ -4130,7 +4136,7 @@ const seedSections = [
               {
                 "id": 1222185,
                 "listing_url": "https://www.airbnb.com/rooms/1222185",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "LUXURIOUS APARTMENT ACROPOLIS VIEW",
                 "summary": "A luxurious penthouse just 10 minutes from central square. Unique Acropolis and Parthenon view Park view from two sides. The biggest veranda in airbnb 50sqm.",
@@ -4227,7 +4233,7 @@ const seedSections = [
               {
                 "id": 12902976,
                 "listing_url": "https://www.airbnb.com/rooms/12902976",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Plato's Academy bright, sunny apartment!",
                 "summary": "This bright,spacious, 2 bedroom apartment easily sleeps 4 (at no extra cost for each person) with it's huge veranda, is located on the 4th floor with a view to the beautiful Greek sky. Located in a residential area,a stroll away from the ancient site of Plato's Academy/museum. Nearby(walking):Metaxurgio(5minutes/800m),Gazi(15minutes/1.5km),Exarhia,Omonia(25minutes/1.5km),Plaka,Thisio and Syntagma(30minutes/2.9km).Easy access to all public transport.",
@@ -4324,7 +4330,7 @@ const seedSections = [
               {
                 "id": 9016660,
                 "listing_url": "https://www.airbnb.com/rooms/9016660",
-                "scrape_id": 20170509084221,
+                "isFav": false, "scrape_id": 20170509084221,
                 "last_scraped": "2017-05-09",
                 "name": "Nice art place in Akadimia Platonos",
                 "summary": "The room is a simple and comfortable space with a comfortable bed, a shared bathroom and kitchen, in a building near the center of Athens, Akadimia Platonos its also an archeological place where Platon used to have his academy, easy reachable by bus.",

@@ -12,25 +12,37 @@ class Section extends Component {
         this.props.onCatClick(propertyType)
     }
 
+    handleSecFavClick = (itemId, item, section) => {
+        this.props.onFavClick(itemId, item, this.props.data)
+    }
+
     render() {
         const {id, title, listings} = this.props.data
-        return (
-            <div className="ms-section-holder">
-                <div className="ms-section-title default-padding">
-                    <Title
-                        text={title}  />
+        if (listings.length > 0) {
+            return (
+                <div className="ms-section-holder">
+                    <div className="ms-section-title default-padding">
+                        <Title
+                            text={title}  />
+                    </div>
+                    <div className="ms-items-container flex-container space-between">
+                        {listings.map((product) =>
+                            <Item
+                                id={product.id}
+                                data={product}
+                                onSecCatClick={this.handleSecCategoryClick}
+                                onSecFavClick={this.handleSecFavClick}
+                            />
+                        )}
+                    </div>
                 </div>
-                <div className="ms-items-container flex-container space-between">
-                    {listings.map((product) =>
-                        <Item
-                            id={product.id}
-                            data={product}
-                            onSecCatClick={this.handleSecCategoryClick}
-                        />
-                    )}
-                </div>
-            </div>
-        )
+            )
+        } else {
+            return (
+                <div className="ms-section-holder"></div>
+            )
+        }
+        
     }
 }
 

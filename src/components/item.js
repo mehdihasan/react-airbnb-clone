@@ -13,8 +13,13 @@ class Item extends Component {
         this.props.onSecCatClick(this.props.data.property_type)
     );
 
+    handleItemFavClick = (isFav) => {
+        this.props.data.isFav = true
+        this.props.onSecFavClick(this.props.data.id, this.props.data)
+    }
+
     render() {
-        const {id, name, picture_url, property_type, price} = this.props.data
+        const {id, name, picture_url, property_type, price, isFav} = this.props.data
         return (
             <div class="ms_item_holder"> 
                 <div className="default-padding">
@@ -39,7 +44,9 @@ class Item extends Component {
                     </div>
 
                     <div className="ms-item-like-container">
-                        <LikeButton />
+                        <LikeButton
+                            isFav={isFav}
+                            onItemFavClick={this.handleItemFavClick} />
                     </div>
                 </div>
             </div>
