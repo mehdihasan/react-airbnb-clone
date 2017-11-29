@@ -6,7 +6,7 @@ body {
 
 /* COMMON FLEX */
 .flex-container {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   align-items: flex-start;
   flex-flow: row wrap;
