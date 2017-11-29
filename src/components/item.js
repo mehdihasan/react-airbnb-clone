@@ -4,10 +4,14 @@ import MsParagraph from "./msp";
 import LikeButton from "./likebutton";
 
 class Item extends Component {
-    
+
     constructor(props) {
         super(props)
     }
+
+    handleItemCatClick = () => (
+        this.props.onSecCatClick(this.props.data.property_type)
+    );
 
     render() {
         const {id, name, picture_url, property_type, price} = this.props.data
@@ -19,7 +23,7 @@ class Item extends Component {
                         width="100%"
                         height="auto" />
 
-                    <div class="ms_item_cat">
+                    <div class="ms-item-cat" onClick={this.handleItemCatClick}>
                         <MsParagraph
                             text={property_type} />
                     </div>

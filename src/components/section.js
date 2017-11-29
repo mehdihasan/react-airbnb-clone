@@ -8,6 +8,10 @@ class Section extends Component {
         super(props)
     }
 
+    handleSecCategoryClick = (propertyType) => {
+        this.props.onCatClick(propertyType)
+    }
+
     render() {
         const {id, title, listings} = this.props.data
         return (
@@ -21,6 +25,7 @@ class Section extends Component {
                         <Item
                             id={product.id}
                             data={product}
+                            onSecCatClick={this.handleSecCategoryClick}
                         />
                     )}
                 </div>

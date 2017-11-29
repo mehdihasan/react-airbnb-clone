@@ -37,6 +37,31 @@ class App extends Component {
       seeds: newSeeds
     })
   }
+
+  handleCategoryClick = (propertyType) => {
+    // alert(propertyType)
+    var newItems = []
+    var newSeeds = []
+    {seedSections.map((section) => 
+      {section.listings.map((item) => 
+        {
+          if (propertyType === item.property_type) {
+            newItems.push(item)
+          }
+        }
+      )}
+    )}
+    var newSection = {
+      id: 1,
+      typeId: 9,
+      title: propertyType,  
+      listings: newItems
+    }
+    newSeeds.push(newSection)
+    this.setState({
+      seeds: newSeeds
+    })
+  }
   
   render() {
 
@@ -55,13 +80,6 @@ class App extends Component {
           </div>
         </div>
 
-        {/* <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-          <Greeter 
-            msg="Hi React"
-            des="This is the desc."/>
-        </p> */}
-
         <div className="content">
           <div className="ms-menu ms-section-holder default-padding">
             {filter.map((filterData) => 
@@ -75,7 +93,8 @@ class App extends Component {
             {this.state.seeds.map((sectionData) =>
                 <Section
                     key={sectionData.id}
-                    data={sectionData} />
+                    data={sectionData}
+                    onCatClick={this.handleCategoryClick} />
             )}
           </div>
         </div>

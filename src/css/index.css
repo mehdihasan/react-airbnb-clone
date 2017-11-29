@@ -141,7 +141,11 @@ body {
   border-radius: 3px ;
 }
 
-.ms_item_cat div p {
+.ms-item-cat {
+  cursor: pointer;
+}
+
+.ms-item-cat div p {
   color: #787878;
   font-weight: 700 ;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif ;
